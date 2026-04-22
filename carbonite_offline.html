@@ -348,7 +348,6 @@
     <div class="brand">
       <span class="dot"></span>
       <span>CARBONITE</span>
-      <span class="tag ok">◉ offline · 0 calls</span>
     </div>
     <div class="topbar-actions">
       <button class="btn ghost" id="btnReset" title="Reset all">↺ Reset</button>
@@ -368,13 +367,12 @@
         <select id="language"></select>
       </label>
       <div style="display:flex; gap:6px; margin-bottom:10px;">
-        <button class="btn" id="btnBeautify" style="flex:1;" title="Code für die aktuelle Sprache formatieren (Ctrl+Shift+F)">✨ Beautify</button>
-        <button class="btn" id="btnBeautifyUndo" title="Rückgängig (vor letztem Beautify)" style="padding:7px 10px;">↶</button>
+        <button class="btn" id="btnBeautify" style="flex:1;" title="Format code for the current language (Ctrl+Shift+F)">✨ Beautify</button>
+        <button class="btn" id="btnBeautifyUndo" title="Undo last Beautify" style="padding:7px 10px;">↶</button>
       </div>
       <div class="editor-wrap" style="flex:1;">
         <textarea id="code" spellcheck="false" autocorrect="off" autocapitalize="off"></textarea>
       </div>
-      <div class="hint">Alle Sprachen, Themes &amp; Formatter sind in diese Datei eingebettet. Kein Netzwerk nötig.</div>
     </div>
   </aside>
 
@@ -408,10 +406,10 @@
       <label class="field">
         <div class="lbl">Card Background</div>
         <input type="color" id="cardBg" value="#282c34" />
-        <div class="hint">Wird automatisch vom Theme gesetzt.</div>
+        <div class="hint">Set automatically from the selected theme.</div>
       </label>
 
-      <label class="toggle"><span class="lbl">Auto-Card-BG vom Theme</span>
+      <label class="toggle"><span class="lbl">Auto Card BG from Theme</span>
         <input type="checkbox" id="autoCardBg" checked /><span class="switch"></span>
       </label>
     </div>
@@ -429,7 +427,7 @@
       </label>
       <label class="field">
         <div class="lbl">Title</div>
-        <input type="text" id="titleInput" placeholder="Optionaler Fenstertitel" />
+        <input type="text" id="titleInput" placeholder="Optional window title" />
       </label>
       <label class="toggle"><span class="lbl">Line numbers</span>
         <input type="checkbox" id="showLines" /><span class="switch"></span>
@@ -510,7 +508,7 @@
           <option value="8">8 spaces</option>
           <option value="tab">Tab character</option>
         </select>
-        <div class="hint">Gilt für alle Beautify-Aufrufe (JS, JSON, XML, SQL, CSS, HTML, Java, …).</div>
+        <div class="hint">Applies to all Beautify calls (JS, JSON, XML, SQL, CSS, HTML, Java, …).</div>
       </label>
     </div>
 
@@ -526,22 +524,7 @@
         <div class="lbl">Export scale <span class="val" id="scaleVal">2×</span></div>
         <input type="range" id="scale" min="1" max="4" value="2" />
       </label>
-      <div class="hint">RTF öffnet direkt in Word/Outlook. HTML ist eine autarke Datei mit eingebettetem Theme-CSS.</div>
-    </div>
-
-    <div class="section" style="border-bottom:none;">
-      <div class="section-title">Privacy</div>
-      <div class="hint" style="color:var(--text-dim); line-height:1.6;">
-        ✓ 0 externe Requests<br>
-        ✓ Keine Telemetrie<br>
-        ✓ Keine Webfonts<br>
-        ✓ Keine CDN-Abhängigkeiten<br>
-        ✓ Code verlässt den Browser nie<br>
-        ✓ Code wird NIE in localStorage gespeichert<br>
-        <br>
-        <span style="color:var(--text-faint);">Nur UI-Einstellungen (Theme, Padding, Font…) werden lokal in <code>localStorage</code> persistiert.</span><br><br>
-        <a href="javascript:void(0)" id="privacyCheck" style="color:var(--accent); text-decoration:underline; cursor:pointer;">Netzwerk-Prüfung ausführen</a>
-      </div>
+      <div class="hint">RTF opens directly in Word/Outlook. HTML is a self-contained file with the theme CSS embedded inline.</div>
     </div>
 
   </aside>
@@ -2097,7 +2080,7 @@ codeInput.addEventListener("keydown", (e) => {
 });
 
 el("btnReset").addEventListener("click", () => {
-  if (!confirm("Alle gespeicherten Einstellungen löschen und neu laden?")) return;
+  if (!confirm("Clear all saved settings and reload?")) return;
   try { localStorage.removeItem(SETTINGS_KEY); } catch(e) {}
   location.reload();
 });
@@ -2382,32 +2365,6 @@ const NETWORK_LOG = [];
   };
 })();
 
-el("privacyCheck").addEventListener("click", () => {
-  // filter out blob: and data: URLs (those are local and fine)
-  const external = NETWORK_LOG.filter(e => {
-    const u = String(e.url || "");
-    return !u.startsWith("blob:") && !u.startsWith("data:") && !u.startsWith("about:") && u !== "?" && u !== "";
-  });
-  let msg = "Netzwerk-Protokoll seit Seitenstart:\n\n";
-  if (NETWORK_LOG.length === 0) {
-    msg += "✓ Keine einzige Netzwerkanfrage registriert.\n";
-    msg += "✓ Keine fetch()-Calls.\n";
-    msg += "✓ Keine XHR-Requests.\n";
-    msg += "✓ Keine sendBeacon-Calls.\n";
-    msg += "✓ Keine externen Bild-Requests.\n\n";
-    msg += "Ihr Code hat den Browser nie verlassen.";
-  } else if (external.length === 0) {
-    msg += "✓ Keine externen Requests.\n";
-    msg += `✓ ${NETWORK_LOG.length} rein lokale(r) blob:/data:-Aufruf(e) (für Datei-Downloads) — unkritisch.\n\n`;
-    msg += "Ihr Code hat den Browser nie verlassen.";
-  } else {
-    msg += "⚠ EXTERNE Requests gefunden:\n\n";
-    external.slice(0, 20).forEach(e => {
-      msg += ` • ${e.type.toUpperCase()} → ${e.url}\n`;
-    });
-  }
-  alert(msg);
-});
 
 /* ---------- Button wiring ---------- */
 el("btnExportPng").addEventListener("click", () => exportPng(true));
@@ -2506,7 +2463,7 @@ function fmt_json(src) {
     try {
       return JSON.stringify(JSON.parse(cleaned), null, ind.string);
     } catch (e2) {
-      throw new Error("Ungültiges JSON: " + e.message);
+      throw new Error("Invalid JSON: " + e.message);
     }
   }
 }
@@ -2683,7 +2640,7 @@ function doBeautify() {
   const kind = currentFormatterFor(lang);
   if (!kind) {
     const label = (lang === "auto" ? el("langVal").textContent : lang) || "unbekannt";
-    flash(`Kein Formatter für „${label}"`);
+    flash(`No formatter for "${label}"`);
     return;
   }
   const fn = FORMATTERS[kind];
@@ -2706,7 +2663,7 @@ function doBeautify() {
     "json": "JSON", "xml": "XML", "sql": "SQL",
     "jsb-js": "js-beautify", "jsb-html": "js-beautify (html)",
     "jsb-css": "js-beautify (css)", "safe-ws": "Whitespace-Clean",
-    "noop": "unverändert"
+    "noop": "unchanged"
   };
   flash("✨ " + (labels[kind] || kind));
 }
