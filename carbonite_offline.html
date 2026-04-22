@@ -1974,13 +1974,15 @@ function render() {
   }
 
   if (el("autoCardBg").checked) {
-    requestAnimationFrame(() => {
-      const bg = getComputedStyle(output).backgroundColor;
-      if (bg && bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent") {
-        card.style.background = bg;
-        el("cardBg").value = rgbToHexStr(bg);
-      }
-    });
+    const themeCss = (THEMES_CSS[el("theme").value] || {}).css || "";
+    const m = themeCss.match(/\.hljs\s*\{[^}]*?background\s*:\s*(#[0-9a-fA-F]{3,8})/);
+    const bg = m ? m[1] : null;
+    if (bg) {
+      card.style.background = bg;
+      el("cardBg").value = bg.length === 4
+        ? "#" + bg[1]+bg[1]+bg[2]+bg[2]+bg[3]+bg[3]
+        : bg.slice(0, 7);
+    }
   } else {
     card.style.background = el("cardBg").value;
   }
