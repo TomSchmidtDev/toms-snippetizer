@@ -1,21 +1,21 @@
-Carbonite
+TomsSnippetizer
 =========
 
 This product is a single-file local replacement for code-screenshot tools.
 It is conceptually inspired by carbon.now.sh by Dawn Labs, but contains
-none of its source code; Carbonite is an independent reimplementation.
+none of its source code; TomsSnippetizer is an independent reimplementation.
 
 The implementation was developed with the assistance of Claude
 (https://claude.ai/) by Anthropic.
 
-The distributed file `carbonite_offline.html` includes the unmodified
+The distributed file `tomssnippetizer_offline.html` includes the unmodified
 source code of the third-party components listed below, each of which
 remains under its original license. The complete, verbatim license texts
 are reproduced in the LICENSE file that accompanies this distribution.
 
 
 --------------------------------------------------------------------------
-Third-party components bundled in carbonite_offline.html
+Third-party components bundled in tomssnippetizer_offline.html
 --------------------------------------------------------------------------
 
   Component   : highlight.js
@@ -64,16 +64,16 @@ Third-party components bundled in carbonite_offline.html
 Components NOT bundled but referenced for typography
 --------------------------------------------------------------------------
 
-Carbonite uses only operating-system-resident monospace fonts for code
+TomsSnippetizer uses only operating-system-resident monospace fonts for code
 display (Consolas, Menlo, SF Mono, DejaVu Sans Mono, Liberation Mono,
 Lucida Console, Courier New, Monaco). No web fonts are loaded, embedded,
 or otherwise included in the distribution.
 
 
 --------------------------------------------------------------------------
-Carbonite's own code
+TomsSnippetizer's own code
 --------------------------------------------------------------------------
 
-  Component   : Carbonite
+  Component   : TomsSnippetizer
   License     : MIT
-  Copyright   : Copyright (c) 2026 Carbonite contributors
+  Copyright   : Copyright (c) 2026 TomsSnippetizer contributors

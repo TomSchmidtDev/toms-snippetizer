@@ -1,20 +1,22 @@
-# Carbonite
+# TomsSnippetizer
 
 > Schöne Code-Screenshots — vollständig offline, ohne einen einzigen Netzwerkaufruf.
 
-Carbonite ist eine einzelne, in sich geschlossene HTML-Datei (~550 KB), die Quellcode in polierte, exportierbare Bilder, RTF- oder HTML-Dateien verwandelt. Das visuelle Konzept und der Funktionsumfang sind inspiriert von **[carbon.now.sh](https://carbon.now.sh/)**. Die Implementierung wurde mit Hilfe von **[Claude](https://claude.ai/)** von Anthropic entwickelt.
+TomsSnippetizer ist eine einzelne, in sich geschlossene HTML-Datei (~550 KB), die Quellcode in polierte, exportierbare Bilder, RTF- oder HTML-Dateien verwandelt. Das visuelle Konzept und der Funktionsumfang sind inspiriert von **[carbon.now.sh](https://carbon.now.sh/)**. Die Implementierung wurde mit Hilfe von **[Claude](https://claude.ai/)** von Anthropic entwickelt.
 
-Anders als der Original-Webdienst läuft Carbonite vollständig im Browser, benötigt zu keinem Zeitpunkt eine Internetverbindung und überträgt nicht ein einziges Byte Ihres Codes nach außen.
+Anders als der Original-Webdienst läuft TomsSnippetizer vollständig im Browser, benötigt zu keinem Zeitpunkt eine Internetverbindung und überträgt nicht ein einziges Byte Ihres Codes nach außen.
+
+> **TomsSnippetizer ist ein unabhängiges Open-Source-Projekt und steht in keiner Verbindung zu Microsoft, Visual Studio oder anderen Unternehmen — es wird von diesen weder unterstützt noch empfohlen.**
 
 ---
 
 ## Wozu ein weiteres Carbon?
 
-[carbon.now.sh](https://carbon.now.sh/) ist ein hervorragendes Tool, allerdings ein gehosteter Online-Dienst. Wer proprietären, vertraulichen oder sensiblen Quellcode in eine fremde Webseite einfügen will, scheitert oft schon an internen Sicherheitsrichtlinien. Carbonite ist der lokale Ein-Datei-Ersatz, der dasselbe Look-and-Feel bietet und um die Funktionen ergänzt, die Entwickler und Technical Writer im Lauf der Jahre vermisst haben.
+[carbon.now.sh](https://carbon.now.sh/) ist ein hervorragendes Tool, allerdings ein gehosteter Online-Dienst. Wer proprietären, vertraulichen oder sensiblen Quellcode in eine fremde Webseite einfügen will, scheitert oft schon an internen Sicherheitsrichtlinien. TomsSnippetizer ist der lokale Ein-Datei-Ersatz, der dasselbe Look-and-Feel bietet und um die Funktionen ergänzt, die Entwickler und Technical Writer im Lauf der Jahre vermisst haben.
 
 ---
 
-![Carbonite Screenshot](screenshots/screenshot-carbonite.png)
+![TomsSnippetizer Screenshot](screenshots/screenshot-tomssnippetizer.png)
 
 ---
 
@@ -56,7 +58,7 @@ Anders als der Original-Webdienst läuft Carbonite vollständig im Browser, ben�
 
 ## Schnellstart
 
-1. Datei `carbonite_offline.html` herunterladen.
+1. Datei `tomssnippetizer_offline.html` herunterladen.
 2. Doppelklick. Jeder moderne Browser öffnet sie.
 3. Optional: Internetverbindung trennen, um zu verifizieren, dass alles weiter funktioniert.
 
@@ -110,7 +112,7 @@ Getestet mit aktuellen Versionen von Chrome, Firefox, Safari und Edge. Das `file
 
 ## Aus Quellen bauen
 
-Die ausgelieferte Datei `carbonite_offline.html` ist die einzige Datei, die Sie brauchen. Wer sie selbst neu bauen möchte (etwa, um weitere Sprachen, Themes oder Fonts hinzuzufügen), findet eine Build-Pipeline, die in einem einzelnen Python-Skript vier npm-Pakete plus Theme-CSS in ein HTML-Template inline einsetzt. Details siehe Build-Skript.
+Die ausgelieferte Datei `tomssnippetizer_offline.html` ist die einzige Datei, die Sie brauchen. Wer sie selbst neu bauen möchte (etwa, um weitere Sprachen, Themes oder Fonts hinzuzufügen), findet eine Build-Pipeline, die in einem einzelnen Python-Skript vier npm-Pakete plus Theme-CSS in ein HTML-Template inline einsetzt. Details siehe Build-Skript.
 
 ---
 

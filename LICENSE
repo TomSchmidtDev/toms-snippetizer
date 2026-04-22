@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Carbonite contributors
+Copyright (c) 2026 TomsSnippetizer contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,12 +25,12 @@ SOFTWARE.
                               ATTRIBUTIONS
 ================================================================================
 
-Carbonite is inspired by carbon.now.sh (https://carbon.now.sh/) by Dawn Labs,
+TomsSnippetizer is inspired by carbon.now.sh (https://carbon.now.sh/) by Dawn Labs,
 which is itself MIT-licensed but whose source code is NOT included in this
-project. Carbonite is an independent reimplementation; it does not derive from
+project. TomsSnippetizer is an independent reimplementation; it does not derive from
 or modify the carbon.now.sh source code.
 
-The implementation of Carbonite was developed with the assistance of Claude
+The implementation of TomsSnippetizer was developed with the assistance of Claude
 (https://claude.ai/) by Anthropic.
 
 
@@ -38,7 +38,7 @@ The implementation of Carbonite was developed with the assistance of Claude
                        BUNDLED THIRD-PARTY SOFTWARE
 ================================================================================
 
-The single-file distribution of Carbonite includes the following third-party
+The single-file distribution of TomsSnippetizer includes the following third-party
 libraries verbatim, each governed by its own license reproduced below.
 
 

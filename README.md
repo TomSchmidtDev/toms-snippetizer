@@ -1,20 +1,22 @@
-# Carbonite
+# TomsSnippetizer
 
 > Beautiful code screenshots — fully offline, zero network calls.
 
-Carbonite is a single self-contained HTML file (~550 KB) that turns source code into polished, exportable images, RTF, or HTML. The visual concept and feature set are inspired by **[carbon.now.sh](https://carbon.now.sh/)**. The implementation was developed with the assistance of **[Claude](https://claude.ai/)** by Anthropic.
+TomsSnippetizer is a single self-contained HTML file (~550 KB) that turns source code into polished, exportable images, RTF, or HTML. The visual concept and feature set are inspired by **[carbon.now.sh](https://carbon.now.sh/)**. The implementation was developed with the assistance of **[Claude](https://claude.ai/)** by Anthropic.
 
-Unlike the original web service, Carbonite runs entirely in your browser, requires no internet connection at any point, and never transmits a single byte of your code anywhere.
+Unlike the original web service, TomsSnippetizer runs entirely in your browser, requires no internet connection at any point, and never transmits a single byte of your code anywhere.
+
+> **TomsSnippetizer is an independent open-source project and is not affiliated with, endorsed by, or connected to Microsoft, Visual Studio, or any other company.**
 
 ---
 
 ## Why another Carbon?
 
-[carbon.now.sh](https://carbon.now.sh/) is a wonderful tool, but it is a hosted service. For pasting proprietary, confidential, or sensitive source code into a third-party website, this is often a non-starter — many corporate security policies forbid it outright. Carbonite is a one-file local replacement that provides the same look-and-feel and adds the capabilities developers and technical writers asked for over the years.
+[carbon.now.sh](https://carbon.now.sh/) is a wonderful tool, but it is a hosted service. For pasting proprietary, confidential, or sensitive source code into a third-party website, this is often a non-starter — many corporate security policies forbid it outright. TomsSnippetizer is a one-file local replacement that provides the same look-and-feel and adds the capabilities developers and technical writers asked for over the years.
 
 ---
 
-![Carbonite screenshot](screenshots/screenshot-carbonite.png)
+![TomsSnippetizer screenshot](screenshots/screenshot-tomssnippetizer.png)
 
 ---
 
@@ -56,7 +58,7 @@ Unlike the original web service, Carbonite runs entirely in your browser, requir
 
 ## Quick start
 
-1. Download `carbonite_offline.html`.
+1. Download `tomssnippetizer_offline.html`.
 2. Double-click it. Any modern browser opens it.
 3. Disconnect from the internet if you want to verify it still works.
 
@@ -110,7 +112,7 @@ Tested on current versions of Chrome, Firefox, Safari, and Edge. The `file://` p
 
 ## Building from source
 
-The shipped `carbonite_offline.html` is the only file you need. If you want to rebuild it (for example to add more languages, themes, or fonts), the build pipeline is a single Python script that inlines four npm packages plus theme CSS files into a template HTML. See the build script for details.
+The shipped `tomssnippetizer_offline.html` is the only file you need. If you want to rebuild it (for example to add more languages, themes, or fonts), the build pipeline is a single Python script that inlines four npm packages plus theme CSS files into a template HTML. See the build script for details.
 
 ---
 

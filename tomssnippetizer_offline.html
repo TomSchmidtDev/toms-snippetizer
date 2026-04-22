@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Carbonite · 100% Offline · No External Calls</title>
+<title>TomsSnippetizer · 100% Offline · No External Calls</title>
 <meta name="referrer" content="no-referrer" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; img-src 'self' data: blob:; connect-src 'none'; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';" />
 
@@ -347,7 +347,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="dot"></span>
-      <span>CARBONITE</span>
+      <span>TomsSnippetizer</span>
     </div>
     <div class="topbar-actions">
       <button class="btn ghost" id="btnReset" title="Reset all">↺ Reset</button>
@@ -389,7 +389,7 @@
           <div class="line-numbers" id="lineNumbers"></div>
           <pre class="code-pre"><code id="output" class="hljs"></code></pre>
         </div>
-        <div class="watermark hidden" id="watermark">carbonite</div>
+        <div class="watermark hidden" id="watermark">tomssnippetizer</div>
       </div>
     </div>
   </main>
@@ -2131,7 +2131,7 @@ async function copyPng() {
 }
 
 function filename(ext) {
-  const base = (el("titleInput").value || "carbonite").replace(/[^a-z0-9_-]+/gi, "_").slice(0, 40) || "carbonite";
+  const base = (el("titleInput").value || "tomssnippetizer").replace(/[^a-z0-9_-]+/gi, "_").slice(0, 40) || "tomssnippetizer";
   return `${base}_${Date.now()}.${ext}`;
 }
 
@@ -2177,7 +2177,7 @@ function exportHtml() {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>${escapeHtml(title || "Carbonite export")}</title>
+<title>${escapeHtml(title || "TomsSnippetizer export")}</title>
 <style>
 ${themeCss}
 html, body { margin:0; padding:0; background:#111; display:flex; align-items:center; justify-content:center; min-height:100vh; font-family: ${font.replace(/"/g,"'")}; }
@@ -2696,7 +2696,7 @@ el("btnBeautifyUndo").addEventListener("click", () => {
    Saves UI/styling preferences across reloads. The pasted code is NEVER persisted
    (privacy-by-default).
 ------------------------------------------------------------------------- */
-const SETTINGS_KEY = "carbonite.settings.v1";
+const SETTINGS_KEY = "tomssnippetizer.settings.v1";
 
 const SAVED_FIELDS = [
   ["theme",        "value"],
