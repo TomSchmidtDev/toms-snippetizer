@@ -27,10 +27,11 @@ Unlike the original web service, TomsSnippetizer runs entirely in your browser, 
 * Window chrome: macOS traffic lights, Windows controls, none, or fully hidden
 * Optional window title
 * Line numbers
+* Word wrap toggle (continuation lines marked with `↵`)
 * Watermark toggle
 * Background: 18 gradient presets, custom color picker, or transparent
 * Card auto-background derived from the chosen syntax theme (or set manually)
-* Padding (X/Y), border radius, drop shadow with full sliders
+* Padding (X/Y), border radius, drop shadow, max card width with full sliders
 * Font family, size, line height
 * PNG export at 1×–4× pixel ratio
 * SVG export

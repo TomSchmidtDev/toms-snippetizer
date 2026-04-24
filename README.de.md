@@ -27,10 +27,11 @@ Anders als der Original-Webdienst läuft TomsSnippetizer vollständig im Browser
 * Fenster-Chrome: macOS-Ampelsystem, Windows-Steuerung, ohne Buttons oder vollständig ausgeblendet
 * Optionaler Fenstertitel
 * Zeilennummern
+* Zeilenumbruch (Word Wrap) — Fortsetzungszeilen werden mit `↵` markiert
 * Wasserzeichen ein-/ausschaltbar
 * Hintergrund: 18 Gradient-Voreinstellungen, freier Color-Picker oder transparent
 * Karten-Hintergrund automatisch aus dem gewählten Theme abgeleitet (oder manuell setzbar)
-* Padding (X/Y), Eckenradius, Schlagschatten via Slider
+* Padding (X/Y), Eckenradius, Schlagschatten, maximale Kartenbreite via Slider
 * Schriftart, -größe, Zeilenhöhe
 * PNG-Export mit 1×–4×-Pixeldichte
 * SVG-Export

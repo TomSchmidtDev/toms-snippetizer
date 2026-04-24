@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0] — 2026-04-24
+
+### Added
+- **Configurable card max-width** — "Max Width" slider in the Layout panel (400–2400 px, default 1100 px); replaces the hard-coded CSS limit; persisted in localStorage; applied to HTML export
+- **Word Wrap toggle** — "WRAP" button in the preview bar enables `white-space: pre-wrap`; continuation lines show a `↵` indicator in the line-numbers column (measured per logical line); affects PNG/SVG/HTML exports; persisted in localStorage
+
+---
+
 ## [1.2.3] — 2026-04-23
 
 ### Fixed
